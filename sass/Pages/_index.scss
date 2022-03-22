@@ -1,0 +1,166 @@
+
+@import "../Utils/mixin";
+@import "../Utils/colors";
+@import "../Composants/animation";
+
+/* Information */
+
+.information {
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 0rem 0 3rem 0;
+  button {
+    background-image: linear-gradient(330deg, $Primaire, $Secondaire);
+    border-radius: 2rem;
+    color: white;
+    transition: transform 1.2s;
+    padding: 0.5rem;
+    border: transparent;
+    margin-top: 2rem;
+    @include baseboxs;
+  }
+  button:hover {
+    transform: scale(1.05);
+    background-image: linear-gradient(
+      356deg,
+      lighten(rgba(155, 89, 220, 1), 5%) 0%,
+      lighten(rgba(167, 127, 216, 1), 5%) 33%,
+      lighten(rgba(255, 121, 218, 1), 5%) 100%);
+  }
+}
+
+/* Function Buttom
+Choice / create / taste  */
+
+.function {
+  counter-reset: step;
+  padding: 1rem;
+  ol {
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    padding: 0;
+    font-size: larger;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    flex-grow: 0;
+    transition: transform 1.2s;
+    @include baseboxs;
+    &:hover {
+      background-color: lighten($color: $Primaire, $amount: 35);
+      @include hov;
+      i {
+        color: $Primaire;
+      }
+    }
+    &::before {
+      content: counter(step);
+      counter-increment: step;
+      border: solid 1px $Primaire;
+      background-color: $Primaire;
+      color: #f6f6f6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.5rem;
+      width: 1.5rem;
+      position: absolute;
+      left: -1rem;
+    }
+  }
+  i {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: grey;
+  }
+}
+
+/* restaurant */
+
+.box {
+  background-color: #F6F6F6;
+  padding: 1rem;
+  .restaubox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.box .card {
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 45%;
+  height: auto;
+  border-radius: 1rem;
+  background-color: white;
+  transition: transform 1.2s;
+  &:hover {
+    @include hov;
+  }
+  @media (max-width: 1000px) {
+    width: 85%;
+  }
+  img {
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+.new {
+  position: relative;
+  &::before {
+    content: "Nouveau";
+    position: absolute;
+    background-color: $Tertiaire;
+    color: darken($color: $Tertiaire, $amount: 50%);
+    height: fit-content;
+    width: fit-content;
+    padding: 0.2px;
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+.card .capt {
+  padding: 1rem;
+  position: relative;
+  i {
+    bottom: 1em;
+    color: $font-black;
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    right: 1em;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background: linear-gradient($primary, $secondary);
+      color: $font-white;
+      font-weight: 600;
+      transform: scale(1.2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

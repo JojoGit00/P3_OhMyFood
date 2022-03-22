@@ -1,0 +1,30 @@
+.footer{
+    background-color: #353535;
+    color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1rem;
+    
+    p{
+        font-family: "Shrikhand", cursive;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        @media (max-width: 1000px){
+            flex-direction: column;
+        }
+    }
+}
+
+.footer__icon {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.footer__listElt {
+    margin: 0.5rem 0;
+}

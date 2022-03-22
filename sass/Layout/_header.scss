@@ -1,0 +1,54 @@
+/* Hearder */
+
+header {
+  background-color: white;
+  font-family: "Shrikhand", cursive;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
+  display: flex;
+  justify-content: center;
+  padding: 1.3rem;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  background-color: white;
+  font-family: "Shrikhand", cursive;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
+  display: flex;
+  justify-content: center;
+  padding: 1.3rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+  i {
+    color: $font-black;
+    left: 2em;
+    position: absolute;
+    top: 2.3em;
+    transition: all 0.2s ease-in-out;
+
+    &::after {
+      color: $font-black;
+      content: "Accueil";
+      font-family: "Roboto";
+      left: 1.5em;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    }
+
+    &:hover {
+      color: black;
+      transform: scale(1.1);
+
+      &::after {
+        opacity: 1;
+        visibility: hidden;
+      }
+    }
+  }
+}

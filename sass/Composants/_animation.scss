@@ -1,0 +1,62 @@
+
+/* Animation du hover des cards */
+
+@keyframes checked {
+  0% {
+    transform: rotateZ(100deg);
+  }
+  50% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+
+/* Animation des card */
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* animation du loader */
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* animation loader */
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 5;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
