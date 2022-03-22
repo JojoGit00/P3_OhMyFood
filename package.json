@@ -1,0 +1,11 @@
+{
+  "name": "p3_pierrot_johann_ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 \"OhMyFood\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JohannP",
+  "license": "ISC"
+}
