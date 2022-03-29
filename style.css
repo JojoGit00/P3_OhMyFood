@@ -600,7 +600,7 @@ Choice / create / taste  */
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0.2px;
+  padding: 3px;
   right: 1rem;
   top: 1rem;
 }
