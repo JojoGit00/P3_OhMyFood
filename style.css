@@ -473,7 +473,7 @@ main .locationcity h2 {
   border-radius: 2rem;
   color: white;
   transition: transform 1.2s;
-  padding: 0.5rem;
+  padding: 1rem;
   border: transparent;
   margin-top: 2rem;
   box-shadow: 0px 6px 10px 3px rgba(0, 0, 0, 0.24);
@@ -790,7 +790,7 @@ Choice / create / taste  */
   background-image: linear-gradient(330deg, #9356DC, #FF79DA);
   border-radius: 2rem;
   color: white;
-  padding: 0.8rem;
+  padding: 1rem;
   border: transparent;
   margin-top: 1rem;
   padding-left: 2rem;
