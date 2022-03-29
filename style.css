@@ -575,7 +575,7 @@ Choice / create / taste  */
 }
 @media (max-width: 1000px) {
   .box .card {
-    width: 85%;
+    width: 100%;
   }
 }
 .box .card img {
