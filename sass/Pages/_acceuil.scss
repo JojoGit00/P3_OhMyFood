@@ -1,0 +1,197 @@
+@import "../Utils/mixin";
+@import "../Utils/colors";
+@import "../Composants/animation";
+
+/* Information */
+
+.information {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 0rem 0 3rem 0;
+  button {
+    background-image: linear-gradient(330deg, $Primaire, $Secondaire);
+    border-radius: 2rem;
+    color: white;
+    transition: transform 1.2s;
+    padding: 1rem;
+    border: transparent;
+    margin-top: 2rem;
+    @include baseboxs;
+  }
+  button:hover {
+    transform: scale(1.05);
+    background-image: linear-gradient(
+      356deg,
+      lighten(rgba(155, 89, 220, 1), 5%) 0%,
+      lighten(rgba(167, 127, 216, 1), 5%) 33%,
+      lighten(rgba(255, 121, 218, 1), 5%) 100%
+    );
+  }
+}
+
+/* Function Buttom
+  Choice / create / taste  */
+
+.function {
+  counter-reset: step;
+  padding: 1rem;
+  ol {
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    padding: 0;
+    font-size: larger;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    flex-grow: 0;
+    transition: transform 1.2s;
+    @include baseboxs;
+    &:hover {
+      background-color: lighten($color: $Primaire, $amount: 35);
+      @include hov;
+      i {
+        color: $Primaire;
+      }
+    }
+    &::before {
+      content: counter(step);
+      counter-increment: step;
+      border: solid 1px $Primaire;
+      background-color: $Primaire;
+      color: #f6f6f6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.5rem;
+      width: 1.5rem;
+      position: absolute;
+      left: -1rem;
+    }
+  }
+  i {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: grey;
+  }
+}
+
+.cards{
+    background-color: #f6f6f6;
+}
+
+.restaurants{
+    background-color: #f6f6f6;
+    display: flex;
+    margin-top:10px;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    justify-content: space-between;
+}
+.restaurants--title{
+    padding-left: 20px;
+    padding-top: 25px;
+    margin-bottom: 0px;
+}
+.restaurants--cards{
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px -3px rgba(0,0,0,0.4);
+    width: 337px;
+    height: 220px;
+    margin: 15px auto;
+    border-radius: 15px;
+}
+.restaurants--cards:hover{
+    box-shadow: 0px 2px 10px -3px rgba(0,0,0,0.8);
+}
+.restaurants--cards--name{
+    font-weight: bold;
+    padding-left: 10px;
+    margin: 7px 0px;
+    font-size: 18px;
+}
+.restaurants--cards--city{
+    font-size: 16px;
+    padding-left: 10px;
+    margin: 7px 0px;
+}    
+
+.photo--cards{
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin:0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.photo--cards1{
+    background-image:url("./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.photo--cards2{
+    background-image: url("./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.photo--cards3{
+ background-image: url("./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.photo--cards4{
+background-image: url("./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.button--new--cards{
+    background-color:#99E2D0;
+    padding: 5px 10px;
+    color: #008766;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    position: relative;
+    top:10px;
+    left:260px;
+}
+.link--cards{
+    text-decoration: none;
+    color: #000000;
+}
+.card-icon-heart{
+    position: relative;
+    bottom: 45px;
+    left: 280px;
+    font-size: 25px;
+    z-index: 0;
+    overflow: hidden;
+    color: transparent;
+    background: black;
+    -webkit-background-clip: text;
+    background-clip: text;
+} 
+
+/* Animation coeur */
+
+.card-icon-heart> i {
+    position:absolute;
+    display:block;
+    content:"";
+    top:0;
+    left:0;
+    background: linear-gradient(to bottom,#a170dd, #ff8cdf );
+    -webkit-background-clip: text;
+    background-clip: text;          
+    animation: toDown .5s forwards;
+}
+    
+.card-icon-heart:hover>i {      
+    animation: toUp .5s forwards;
+}
+

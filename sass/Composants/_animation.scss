@@ -60,3 +60,43 @@
     visibility: hidden;
   }
 }
+
+
+/* Animation Coeur  */
+
+@keyframes toDown {
+  0% {
+      opacity:1;
+      background: linear-gradient(to bottom ,#a170dd,#ff8cdf);
+      -webkit-background-clip: text;      
+  }
+  50% {
+      opacity:.5;
+      background: linear-gradient(to bottom, transparent  ,#a170dd , #ff8cdf);
+      -webkit-background-clip: text;          
+  }
+  100% {
+      opacity:0;
+      background: linear-gradient(to bottom,transparent ,transparent, transparent);
+      -webkit-background-clip: text;              
+  }
+}
+
+@keyframes toUp {
+  0% {
+      opacity:0;
+      background: linear-gradient(to bottom,transparent ,transparent, transparent);
+      -webkit-background-clip: text;          
+  }
+  50% {
+      opacity:.5;
+      background: linear-gradient(to bottom, transparent ,#a170dd, #ff8cdf );
+      -webkit-background-clip: text;          
+  }
+  100% {
+      opacity:1;
+      background: linear-gradient(to bottom ,#a170dd, #ff8cdf);
+      -webkit-background-clip: text;      
+      
+  }
+}
