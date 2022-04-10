@@ -815,7 +815,8 @@ main .locationcity h2 {
   background: linear-gradient(#9356DC, #FF79DA);
   color: #ffffff;
   font-weight: 600;
-  transform: scale(1.2);
+  -webkit-animation: toUp 0.5s forwards;
+          animation: toUp 0.5s forwards;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

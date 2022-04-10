@@ -50,7 +50,7 @@
         background: linear-gradient($primary, $secondary);
         color: $font-white;
         font-weight: 600;
-        transform: scale(1.2);
+        animation: toUp .5s forwards ;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
