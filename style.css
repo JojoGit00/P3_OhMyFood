@@ -314,8 +314,8 @@ p {
   position: fixed;
   z-index: 2;
   inset: 0;
-  -webkit-animation: loader 3s forwards;
-          animation: loader 3s forwards;
+  -webkit-animation: loader 2s forwards;
+          animation: loader 2s forwards;
 }
 
 .wave {
